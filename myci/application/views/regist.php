@@ -17,7 +17,7 @@
             </span>
         </>
         <p>
-            密码：<input type="password" name="userpassword">
+            密&nbsp&nbsp&nbsp码：<input type="password" name="userpassword">
             <span style="color: red">
                 <?php echo isset($err_passwd)?$err_passwd:""; ?>
                 <?php echo isset($err_pwd)?$err_pwd:""; ?>
