@@ -5,7 +5,15 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$loginUser = $this->session->userdata('loginUser');
+		$this -> load -> model('article_model');
+        $articles = $this -> article_model -> get_articles_by_user($loginUser -> user_id);
+
+        $types = $types = $this ->article_model -> get_types_by_user($loginUser -> user_id);
+        $this->load->view('index',array(
+            'articles' => $articles,
+            'types' => $types
+        ));
 	}
     public function login()
     {
@@ -33,10 +41,12 @@ class Welcome extends CI_Controller {
             $this -> load -> model('user_model');
             $row = $this -> user_model -> get_by_name_pwd($uname,$pwd);
             if($row){
-                echo '登录成功';
+                $this -> session -> set_userdata('loginUser',$row);
+                 echo '登录成功';
+                redirect('welcome/index');
             }else{
                // echo "登陆失败,检查账号密码";
-                $data['errot_err'] = "登陆失败,请检查账号密码";
+                $data['error_err'] = "登陆失败,请检查账号密码";
                 $this -> load -> view('login',$data);
             }
         }else{

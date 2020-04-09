@@ -60,7 +60,7 @@
                 <?php echo isset($error_pwd)?$error_pwd:"";?>
             </span>
             <span style="color:red">
-                <?php echo isset($errot_err)?$errot_err:"";?>
+                <?php echo isset($error_err)?$error_err:"";?>
             </span>
         </div>
         <form class="login-form" action="welcome/check_login" method="post">
