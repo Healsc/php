@@ -9,14 +9,14 @@
     <base href="<?php echo site_url();?>">
 </head>
 <body>
-
+    <br/>
+    <a href="admin/new_blog">发表文章</a>
+    <br/>
+    <a href="admin/list_blogs">文章管理</a>
 </body>
 </html>
 
-<?php
-echo 'admin_index';
-?>
-<br/>
-<a href="admin/new_blog">发表文章</a>
-<br/>
-<a href="admin/list_blogs">文章管理</a>
+    <?php
+    echo 'admin_index';
+    ?>
+
