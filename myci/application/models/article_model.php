@@ -1,5 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
+
 class Article_model extends CI_Model{
     public function get_articles_by_user($user_id){
        $this -> db -> select('a.*,t.type_name');
@@ -26,4 +28,13 @@ class Article_model extends CI_Model{
         ));
         return $this -> db -> affected_rows();
     }
+    public function delete_article($ids){
+//        $sql = 'delete from t_article where article_id in('.$ids.')';
+//        $this -> db -> query($sql);
+        $this->db->where_in('article_id',$ids);
+        $this->db->delete('t_article');
+        return $this -> db -> affected_rows();
+    }
+
+
 }

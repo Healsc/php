@@ -7,16 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <base href="<?php echo site_url();?>">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <style>
+        .admin{
+            margin-left: 25%;
+        }
+    </style>
 </head>
 <body>
-    <br/>
-    <a href="admin/new_blog">发表文章</a>
-    <br/>
-    <a href="admin/list_blogs">文章管理</a>
+    <div class="container">
+        <div id="header">
+            <?php $loginUser = isset($loginUser)?$loginUser:""?>
+            <div class="header-name"><?php echo $loginUser->username;?> 's Blog</div>
+            <div class="header-mood"><?php echo $loginUser->mood;?></div>
+        </div>
+
+        <div id="nav">
+                <h5 class="nav-title">个人信息管理</h5>
+                <div>
+                    <a  href="admin/new_blog">编辑个人资料</a>
+                    <br/>
+                    <a href="admin/list_blogs">修改登录密码</a>
+                </div>
+                <h5 class="nav-title">博客管理</h5>
+                <div>
+                    <a  href="admin/new_blog">发表文章</a>
+                    <br/>
+                    <a href="admin/list_blogs">分类管理</a>
+                    <br/>
+                    <a href="admin/list_blogs">文章管理</a>
+                    <br/>
+                    <a href="admin/list_blogs">评论管理</a>
+                </div>
+        </div>
+        <div class="admin">
+              <br/>
+              <a href="admin/new_blog">发表文章</a>
+              <br/>
+              <a href="admin/list_blogs">文章管理</a>
+        </div>
+    </div>
+
+
 </body>
 </html>
 
-    <?php
-    echo 'admin_index';
-    ?>
 
