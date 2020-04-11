@@ -129,6 +129,14 @@ class Admin extends CI_Controller{
                 'results'=>$results
             ));
         }
-
+    }
+    public function update_type(){
+        $type_id = $this->input->get('type_id');
+        $type_name = $this->input ->get('type_name');
+        $this->load->model('type_model');
+        $row = $this->type_model->update_type($type_id,$type_name);
+        if($row){
+            redirect('admin/get_blog_type');
+        }
     }
 }

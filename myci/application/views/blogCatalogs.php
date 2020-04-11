@@ -14,15 +14,15 @@
 <body>
     <?php if(isset($results)){?>
         <table >
+            <tr>
+                <th>序号</th>
+                <th>分类名</th>
+                <th>文章</th>
+                <th>操作</th>
+
+            </tr>
             <?php foreach ($results as $index=>$result){?>
 
-                <tr>
-                    <th>序号</th>
-                    <th>分类名</th>
-                    <th>文章</th>
-                    <th>操作</th>
-
-                </tr>
                 <tr>
                     <td><?php echo $index;?></td>
                     <td><?php echo $result->type_name;?></td>
@@ -33,6 +33,12 @@
                     </td>
                     <br/>
                 </tr>
+                <form action="admin/update_type">
+                    <input type="hidden" name="type_id" value="<?php echo $result->type_id?>">
+                    <input type="text" name="type_name">
+                    <input type="submit" value="修改">
+                </form>
+
             <?php }?>
         </table>
 

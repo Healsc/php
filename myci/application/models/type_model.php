@@ -6,4 +6,10 @@ class Type_model extends CI_Model{
         return $this -> db -> query($sql) -> result();
 
     }
+    public function update_type($type_id,$type_name){
+        $this->db->set('type_name',$type_name);
+        $this->db->where('type_id',$type_id);
+        $this->db->update('t_article_type');
+        return $this -> db -> affected_rows();
+    }
 }
