@@ -34,11 +34,11 @@
                 <div>
                     <a  href="admin/new_blog">发表文章</a>
                     <br/>
-                    <a href="admin/list_blogs">分类管理</a>
+                    <a href="admin/get_blog_type">分类管理</a>
                     <br/>
-                    <a href="admin/list_blogs">文章管理</a>
+                    <a href="admin/get_blog_type">文章管理</a>
                     <br/>
-                    <a href="admin/list_blogs">评论管理</a>
+                    <a href="admin/get_comment_about_me">评论管理</a>
                 </div>
         </div>
         <div class="admin">

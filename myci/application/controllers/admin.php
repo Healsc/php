@@ -50,6 +50,85 @@ class Admin extends CI_Controller{
         }else{
             echo "fail";
         }
+    }
+    public function get_article_by_id(){
+        $id = $this->input->get('id');
+        $loginUser = $this->session->userdata('loginUser');
+        $this->load->model('article_model');
+        $results = $this->article_model->get_articles_by_user($loginUser->user_id);
+        $this->load->model('comment_model');
+        $comment_result = $this->comment_model->get_content_by_articleid($id);
+        $preArticle = null;
+        $nextArticle = null;
+        foreach ($results as $index=>$result){
+            if($id == $result->article_id){
+                $row = $result;
+                if($index>0){
+                    $preArticle = $results[$index-1];
+                }
+                if($index < count($results)-1){
+                    $nextArticle = $results[$index+1];
+                }
+                break;
+            }
+        }
+        if($results){
+            $this->load->view('viewPost',array(
+                'row'=>$row,
+                'preArticle'=>$preArticle,
+                'nextArticle'=>$nextArticle,
+                'comment_result'=>$comment_result
+            ));
+        }else{
+            echo 'fail';
+        }
+    }
+    public function save_comment(){
+        $loginUser = $this -> session -> userdata('loginUser');
+        $article_id = $this->input->post('id');
+        $content = $this->input->post('content');
+        $user_id = $loginUser->user_id;
+        $this->load->model('comment_model');
+        $row = $this->comment_model->save_comment($article_id,$content,$user_id);
+        if($row){
+            redirect("admin/get_article_by_id?id=$article_id");
+            echo 'success';
+        }else{
+            echo 'fail';
+        }
+    }
+    public function get_comment_about_me(){
+        $loginUser = $this->session->userdata('loginUser');
+        $this->load->model('comment_model');
+        $results = $this->comment_model->get_comment_by_userid($loginUser->user_id);
+        if($results){
+            $this->load->view('blogComments',array(
+                'results'=>$results
+            ));
+        }else{
+
+        }
+    }
+    public function delete_comment(){
+
+        $comment_id = $this->input->get('comment_id');
+        $this->load->model('comment_model');
+        $row = $this->comment_model->delete_comment($comment_id);
+        if($row){
+            redirect('admin/get_comment_about_me');
+        }else{
+            echo "删除评论失败";
+        }
+    }
+    public function get_blog_type(){
+        $loginUser = $this->session->userdata('loginUser');
+        $this->load->model('type_model');
+        $results = $this->type_model->get_types_by_user($loginUser->user_id);
+        if($results){
+            $this->load->view('blogCatalogs',array(
+                'results'=>$results
+            ));
+        }
 
     }
 }

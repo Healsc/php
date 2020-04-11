@@ -13,12 +13,12 @@ class Article_model extends CI_Model{
     }
 
     public function get_types_by_user($user_id){
-        $sql = "select t.*,(select count(*) from t_article a where a.type_id = t.type_id) num from t_article_type t where t.user_id = $user_id";
-        return $this -> db -> query($sql) -> result();
+    $sql = "select t.*,(select count(*) from t_article a where a.type_id = t.type_id) num from t_article_type t where t.user_id = $user_id";
+    return $this -> db -> query($sql) -> result();
 //        return $this -> db ->get_where('t_article_type',array(
 //            'user_id' => $user_id
 //        )) -> result();
-    }
+}
     public function save_article($title,$content,$type_id,$user_id){
         $this -> db -> insert('t_article',array(
             'user_id' => $user_id,
@@ -36,5 +36,10 @@ class Article_model extends CI_Model{
         return $this -> db -> affected_rows();
     }
 
-
+    public function get_article_by_article_id($id){
+        $query = $this -> db -> get_where('t_article',array(
+            'article_id'=>$id
+        ));
+        return $query->row();
+    }
 }

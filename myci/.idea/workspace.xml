@@ -12,6 +12,20 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="Unnamed">
       <favorite_root url="file://$PROJECT_DIR$/application/views/login.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
@@ -54,6 +68,7 @@
       <workItem from="1586491680266" duration="4220000" />
       <workItem from="1586495922500" duration="330000" />
       <workItem from="1586514466750" duration="10022000" />
+      <workItem from="1586568179364" duration="18168000" />
     </task>
     <servers />
   </component>
@@ -65,22 +80,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="377" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586232056564" />
-    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586233403495">
+    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586608681655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1586233403495" />
-    <state x="1010" y="471" key="NewPhpFileDialog" timestamp="1586434398241">
+    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1586608681655" />
+    <state x="1010" y="471" key="NewPhpFileDialog" timestamp="1586608542709">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1010" y="471" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586434398241" />
+    <state x="1010" y="471" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586608542709" />
     <state x="603" y="120" key="SettingsEditor" timestamp="1586087792208">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="603" y="120" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1586087792208" />
-    <state x="969" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1586514474794">
+    <state x="969" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1586568232613">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="969" y="290" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586514474794" />
+    <state x="969" y="290" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586568232613" />
     <state x="1059" y="249" key="run.anything.popup" timestamp="1586521542435">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

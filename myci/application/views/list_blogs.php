@@ -35,7 +35,9 @@
                     <div>
                         <input type="checkbox" name="article" value="<?php echo $article->article_id;?>">
                         <span>
-                             <?php echo $article->title;?>
+                            <a href="admin/get_article_by_id?id=<?php echo $article->article_id;?>" target="_blank">
+                                  <?php echo $article->title;?>
+                            </a>
                         </span>
                         <sapn>
                             <?php echo $article->post_date;?>
