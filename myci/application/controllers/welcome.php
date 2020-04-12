@@ -5,16 +5,25 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$loginUser = $this->session->userdata('loginUser');
+//		$loginUser = $this->session->userdata('loginUser');
 		$this -> load -> model('article_model');
+        $articles = $articles = $this -> article_model -> get_articles();
+
+        $this->load->view('index',array(
+            'articles' => $articles
+        ));
+	}
+	public function home(){
+        $loginUser = $this->session->userdata('loginUser');
+        $this -> load -> model('article_model');
         $articles = $this -> article_model -> get_articles_by_user($loginUser -> user_id);
 
         $types = $types = $this ->article_model -> get_types_by_user($loginUser -> user_id);
-        $this->load->view('index',array(
+        $this->load->view('home',array(
             'articles' => $articles,
             'types' => $types
         ));
-	}
+    }
     public function login()
     {
         $this->load->view('login');
@@ -101,6 +110,10 @@ class Welcome extends CI_Controller {
         }else{
             $this -> load -> view('regist',$data);
         }
+    }
+    public function login_out(){
+        $this -> session -> unset_userdata('loginUser');
+        redirect('welcome/index');
     }
 }
 

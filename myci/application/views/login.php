@@ -14,7 +14,17 @@
             left: 0;
             bottom: 0;
             right: 0;
-            background-color: #515a6e;
+        }
+        .bg-img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .bg-img img{
+            width: 100%;
+            height: 100%;
         }
         .container .show-info{
             position: absolute;
@@ -27,30 +37,23 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            width: 400px;
+            width: 300px;
             padding: 20px 40px 10px 40px;
-            border: 1px solid #dcdee2;
+
         }
 
-        .container .login-form p{
-            display: flex;
-        }
-        .container .login-form .part-one{
-            flex: 1;
-        }
-        .container .login-form .part-two{
-            flex: 3;
-            border: 1px solid #ddd;
-        }
         .container .login-form .submit-btn{
-            margin: 20px 100px 0 100px;
-            flex: 1;
-            height: 30px;
             background-color: #19be6b;
+        }
+        input{
+            width: 200px;
         }
     </style>
 </head>
 <body>
+    <div class="bg-img">
+        <img  src="assets/imgs/login_bg.jpg" alt="">
+    </div>
     <div class="container">
         <div class="show-info">
             <span style="color:red">
@@ -65,12 +68,10 @@
         </div>
         <form class="login-form" action="welcome/check_login" method="post">
             <p>
-                <span class="part-one"> 用户名：</span>
-                <input class="part-two" type="text" name="username">
+                <input class="part-two" type="text" name="username" placeholder="用户名">
             </p>
           <p>
-              <span  class="part-one"> 密码：</span>
-              <input class="part-two" type="password" name="password">
+              <input class="part-two" type="password" name="password" placeholder="请输入密码">
           </p>
           <p>
               <input class="submit-btn" type="submit" value="登录">

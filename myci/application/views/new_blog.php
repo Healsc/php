@@ -48,22 +48,29 @@
             <div>
                 <a  href="admin/new_blog">发表文章</a>
                 <br/>
-                <a href="admin/list_blogs">分类管理</a>
+                <a href="admin/get_blog_type">分类管理</a>
                 <br/>
-                <a href="admin/list_blogs">文章管理</a>
+                <a href="admin/get_blog_type">文章管理</a>
                 <br/>
-                <a href="admin/list_blogs">评论管理</a>
+                <a href="admin/get_comment_about_me">评论管理</a>
             </div>
         </div>
         <div class="post-article">
-<!--            <br/>-->
-<!--            <a href="admin/new_blog">发表文章</a>-->
-<!--            <br/>-->
-<!--            <a href="admin/list_blogs">文章管理</a>-->
+
+
+            </p>
+                <form action="admin/save_type" method="post">
+                    <input type="text" name="type_name">
+                    <input type="hidden" name="user_id" value="<?php echo $loginUser->user_id;?>">
+                    <input type="submit" value="添加类型">
+                </form>
+            <p>
+
             <form action="admin/post_article" method="post">
                 <p>
                     <span>标题</span>
-                    <input name="title" type="text">
+                    <input style="width: 400px" name="title" type="text">
+
                 </p>
                 <p>
                     <span>类型</span>
@@ -78,9 +85,9 @@
                         }
                         ?>
                     </select>
+
+
                 </p>
-
-
                 <textarea name="content" style="width:800px;height:400px;visibility:hidden;">KindEditor</textarea>
 
                 <input class="btn-submit" type="submit" value="发布" style="margin-top: 10px">

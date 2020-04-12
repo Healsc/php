@@ -139,4 +139,13 @@ class Admin extends CI_Controller{
             redirect('admin/get_blog_type');
         }
     }
+    public function save_type(){
+        $type_name = $this ->input->post('type_name');
+        $user_id = $this->input->post('user_id');
+        $this->load->model('type_model');
+        $rows = $this->type_model->save_type($type_name,$user_id);
+        if($rows){
+            redirect('admin/new_blog');
+        }
+    }
 }

@@ -69,6 +69,7 @@
       <workItem from="1586495922500" duration="330000" />
       <workItem from="1586514466750" duration="10022000" />
       <workItem from="1586568179364" duration="19485000" />
+      <workItem from="1586662856009" duration="11976000" />
     </task>
     <servers />
   </component>
@@ -80,26 +81,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="377" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586232056564" />
-    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586608681655">
+    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586695190290">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1586608681655" />
-    <state x="1010" y="471" key="NewPhpFileDialog" timestamp="1586608542709">
+    <state x="1213" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1586695190289" />
+    <state x="1010" y="471" key="NewPhpFileDialog" timestamp="1586695614702">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1010" y="471" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586608542709" />
+    <state x="1010" y="471" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586695614702" />
     <state x="603" y="120" key="SettingsEditor" timestamp="1586087792208">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="603" y="120" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1586087792208" />
-    <state x="969" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1586568232613">
+    <state x="969" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1586662870316">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="969" y="290" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586568232613" />
-    <state x="1059" y="249" key="run.anything.popup" timestamp="1586521542435">
+    <state x="969" y="290" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586662870316" />
+    <state x="1059" y="249" key="run.anything.popup" timestamp="1586691295216">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1059" y="249" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1586521542435" />
+    <state x="1059" y="249" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1586691295216" />
     <state x="1059" y="45" key="search.everywhere.popup" timestamp="1586435604840">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
