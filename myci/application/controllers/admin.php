@@ -2,9 +2,14 @@
 class Admin extends CI_Controller{
     public function index(){
         $loginUser = $this -> session -> userdata('loginUser');
-        $this->load->view('admin_index',array(
-            'loginUser'=>$loginUser
-        ));
+        if($loginUser){
+            $this->load->view('admin_index',array(
+                'loginUser'=>$loginUser
+            ));
+        }else{
+            redirect('welcome/login');
+        }
+
     }
 
     public function new_blog(){
@@ -88,14 +93,20 @@ class Admin extends CI_Controller{
         $article_id = $this->input->post('id');
         $content = $this->input->post('content');
         $user_id = $loginUser->user_id;
-        $this->load->model('comment_model');
-        $row = $this->comment_model->save_comment($article_id,$content,$user_id);
-        if($row){
-            redirect("admin/get_article_by_id?id=$article_id");
-            echo 'success';
+        if($loginUser){
+            $this->load->model('comment_model');
+            $row = $this->comment_model->save_comment($article_id,$content,$user_id);
+            if($row){
+                redirect("article/get_article_by_id?id=$article_id");
+
+            }else{
+                echo 'fail';
+            }
         }else{
-            echo 'fail';
+            redirect('welcome/login');
         }
+
+
     }
     public function get_comment_about_me(){
         $loginUser = $this->session->userdata('loginUser');

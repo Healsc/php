@@ -14,14 +14,17 @@ class Welcome extends CI_Controller {
         ));
 	}
 	public function home(){
-        $loginUser = $this->session->userdata('loginUser');
+       // $loginUser = $this->session->userdata('loginUser');
+        $id = $this->input->get('id');
         $this -> load -> model('article_model');
-        $articles = $this -> article_model -> get_articles_by_user($loginUser -> user_id);
-
-        $types = $types = $this ->article_model -> get_types_by_user($loginUser -> user_id);
+        $this->load->model('user_model');
+        $userinfo = $this->user_model->get_name_by_user_id($id);
+        $articles = $this -> article_model -> get_articles_by_user($id);
+        $types = $this ->article_model -> get_types_by_user($id);
         $this->load->view('home',array(
             'articles' => $articles,
-            'types' => $types
+            'types' => $types,
+            'userinfo'=>$userinfo
         ));
     }
     public function login()
@@ -115,6 +118,8 @@ class Welcome extends CI_Controller {
         $this -> session -> unset_userdata('loginUser');
         redirect('welcome/index');
     }
+
+
 }
 
 /* End of file welcome.php */

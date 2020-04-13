@@ -17,11 +17,14 @@
 </head>
 <body>
     <div class="container">
-        <div id="header">
-            <?php $loginUser = isset($loginUser)?$loginUser:""?>
-            <div class="header-name"><?php echo $loginUser->username;?> 's Blog</div>
-            <div class="header-mood"><?php echo $loginUser->mood;?></div>
-        </div>
+        <?php $loginUser = isset($loginUser)?$loginUser:""?>
+        <?php if($loginUser){?>
+            <div id="header">
+                <div class="header-name"><?php echo $loginUser->username;?> 's Blog</div>
+                <div class="header-mood"><?php echo $loginUser->mood;?></div>
+            </div>
+        <?php }?>
+
 
         <div id="nav">
                 <h5 class="nav-title">个人信息管理</h5>
@@ -36,7 +39,7 @@
                     <br/>
                     <a href="admin/get_blog_type">分类管理</a>
                     <br/>
-                    <a href="admin/get_blog_type">文章管理</a>
+                    <a href="admin/list_blogs">文章管理</a>
                     <br/>
                     <a href="admin/get_comment_about_me">评论管理</a>
                 </div>

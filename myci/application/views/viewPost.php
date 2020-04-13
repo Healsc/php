@@ -36,7 +36,12 @@
                 <?php echo $row->title;?>
             </div>
             <div class="acticle-time">
+                <?php echo $row->type_name?>
+                <br/>
                 <?php echo $row->post_date?>
+            </div>
+            <div>
+
             </div>
             <div class="article-content">
                 <?php echo html_entity_decode($row->content, ENT_QUOTES, 'UTF-8') ?>
@@ -78,13 +83,6 @@
             <?php }?>
         <?php }?>
 
-
-
-        <form action="admin/save_comment" method="post">
-            <input type="text" name="content">
-            <input type="hidden" name="id" value="<?php echo $row->article_id;?>">
-            <input type="submit" value="留言">
-        </form>
     </div>
 
 

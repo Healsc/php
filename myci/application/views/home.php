@@ -28,8 +28,9 @@ $types = isset($types)?$types:"";
 <div>
     <h4>用户名</h4>
     <?php
-    $loginUser = $this -> session -> userdata('loginUser');
-    echo $loginUser -> username;
+        echo $userinfo->username;
+//    $loginUser = $this -> session -> userdata('loginUser');
+//    echo $loginUser -> username;
     ?>
 </div>
 

@@ -65,7 +65,10 @@
 
                     </div>
                      <div class="article-author">
-                        <?php echo $article->username;?>
+                         <a href="welcome/home?id=<?php echo $article->user_id;?>">
+                             <?php echo $article->username;?>
+                         </a>
+
                      </div>
                      <div class="article-time">
                         <?php echo $article->post_date;?>

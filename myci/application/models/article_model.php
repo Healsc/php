@@ -69,4 +69,5 @@ class Article_model extends CI_Model{
 //        $query  = $this->db->get('t_article');
 //        return $query -> result();
     }
+
 }

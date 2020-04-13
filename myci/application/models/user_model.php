@@ -21,4 +21,11 @@ class User_model extends CI_Model{
         ));
         return $query -> row(); // $quert -> result();
     }
+    public function  get_name_by_user_id($id){
+        $this -> db -> select('t_user.username');
+        $this -> db -> from('t_user');
+        $this -> db -> where('t_user.user_id',$id);
+        $query = $this->db->get();
+        return $query -> row();
+    }
 }

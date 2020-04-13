@@ -1,6 +1,3 @@
-<?php
-    echo 'list blog';
-?>
 <!doctype html>
 <html lang="en">
 <head>
